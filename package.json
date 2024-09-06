@@ -9,7 +9,7 @@
     "lint": "next lint",
     "db:generate": "drizzle-kit generate --dialect=postgresql --schema=db/schema.ts --out=./drizzle",
     "db:migrate": "tsx ./script/migrate.ts",
-    "db:seed": "tsx ./script/seed.ts",
+    "db:seed": "./node_modules/.bin/tsx  ./script/seed.ts",
     "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
@@ -57,8 +57,7 @@
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.23.8",
-    "zustand": "^4.5.5",
-    "tsx": "^4.19.0"
+    "zustand": "^4.5.5"
   },
   "devDependencies": {
     "@types/node": "^20",
