@@ -9,10 +9,8 @@ const TestButton = () => {
         try {
             setLoading(true)
             const response = await fetch('/api/run-seed', { 
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
+                method: 'GET',
+                
             });
             const data = await response.json();
             if (response.ok) {
@@ -21,6 +19,7 @@ const TestButton = () => {
 
                 alert(data.message);
             } else {
+                setLoading(false)
                 alert(data.error || '执行失败');
             }
         } catch (error) {
