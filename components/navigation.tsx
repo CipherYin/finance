@@ -31,11 +31,7 @@ const routes =[
     {
         href: "/categories",
         label: "类别"
-    },
-    {
-        href: "/settings",
-        label: "设置"
-    }
+    } 
 ];
 
 const Navigation = () => {

@@ -4,7 +4,7 @@ import  accounts  from './accounts'
 export const runtime = 'nodejs'
 import categories from "./categories";
 import transactions from "./transactions";
-
+import summary from "./summary"
 const app = new Hono().basePath('/api')
 
 
@@ -12,6 +12,7 @@ const app = new Hono().basePath('/api')
 const routes = app.route("/accounts",accounts)
                 .route("/categories", categories)
                 .route("/transactions", transactions)
+                .route("/summary", summary)
 
 export const GET = handle(app)
 export const POST = handle(app)

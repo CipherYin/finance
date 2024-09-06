@@ -73,19 +73,19 @@ type Period = {
   to: string | Date | undefined;
 };
 
-export function formatDateRange (period?: Period) {
+export function formatDateRange(period?: Period) {
   const defaultTo = new Date();
   const defaultFrom = subDays(defaultTo, 30);
 
   if (!period?.from) {
-    return `${format(defaultFrom, "LLL dd")} - ${format(defaultTo, "LLL dd, y")}`;
+    return `${format(defaultFrom, "yyyy年MM月dd日")} - ${format(defaultTo, "yyyy年MM月dd日")}`;
   }
 
   if (period.to) {
-    return `${format(period.from, "LLL dd")} - ${format(period.to, "LLL dd, y")}`;
+    return `${format(period.from, "yyyy年MM月dd日")} - ${format(period.to, "yyyy年MM月dd日")}`;
   }
 
-  return format(period.from, "LLL dd, y");
+  return format(period.from, "yyyy年MM月dd日");
 };
 
 export function formatPercentage(

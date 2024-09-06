@@ -22,7 +22,7 @@ export const useCreateTransaction = () => {
     onSuccess: () => {
       toast.success("创建成功");
       queryClient.invalidateQueries({ queryKey: ["transactions"] });
-      // queryClient.invalidateQueries({ queryKey: ["summary"] });
+      queryClient.invalidateQueries({ queryKey: ["summary"] });
     },
     onError: () => {
       toast.error("创建失败");

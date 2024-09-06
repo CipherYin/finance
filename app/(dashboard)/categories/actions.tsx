@@ -20,8 +20,8 @@ type Props = {
 
 export const Actions = ({ id }: Props) => {
   const [ConfirmationDialog, confirm] = useConfirm(
-    "Are you sure?",
-    "You are about to delete this category."
+    "你确定要删除当前所选类别吗？",
+    ""
   );
 
   const deleteMutation = useDeleteCategory(id);

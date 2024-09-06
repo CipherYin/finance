@@ -12,7 +12,7 @@ const HeaderLogo = () => {
                     height={28}
                 />
                 <p className="font-semibold text-white text-2xl ml-2.5">
-                    财务信息管理
+                    记账平台
                 </p>
             </div>
         </Link> 
