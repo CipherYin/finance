@@ -9,7 +9,7 @@
     "lint": "next lint",
     "db:generate": "drizzle-kit generate --dialect=postgresql --schema=db/schema.ts --out=./drizzle",
     "db:migrate": "tsx ./script/migrate.ts",
-    "db:seed": "npx tsx  ./script/seed.ts",
+    "db:seed": "tsx  ./script/seed.ts",
     "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
