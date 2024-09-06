@@ -1,4 +1,5 @@
 import { useUser } from "@clerk/nextjs";
+import TestButton from "./test-button";
 
 const WelcomeMsg = () => {
     const {user, isLoaded} = useUser();
@@ -9,7 +10,9 @@ const WelcomeMsg = () => {
             </h2>
             <p className="text-sm lg:text-base text-[#89b6fd]">
                 这 里 是 你 的 财 务 信 息 报 告
+                <TestButton/>
             </p>
+
         </div>
      );
 }

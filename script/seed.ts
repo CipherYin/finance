@@ -11,15 +11,18 @@ const db = drizzle(sql);
 
 const SEED_USER_ID = "user_2lbsufsR6gWgm9dN6nuteioZdq6";
 const SEED_CATEGORIES = [
-  { id: "category_1", name: "Food", userId: SEED_USER_ID, plaidId: null },
-  { id: "category_2", name: "Rent", userId: SEED_USER_ID, plaidId: null },
-  { id: "category_3", name: "Utilities", userId: SEED_USER_ID, plaidId: null },
-  { id: "category_7", name: "Clothing", userId: SEED_USER_ID, plaidId: null },
+  { id: "category_1", name: "食物", userId: SEED_USER_ID, plaidId: null },
+  { id: "category_2", name: "租金", userId: SEED_USER_ID, plaidId: null },
+  { id: "category_3", name: "公用", userId: SEED_USER_ID, plaidId: null },
+  // { id: "category_7", name: "服装", userId: SEED_USER_ID, plaidId: null },
+  // { id: "category_5", name: "运输", userId: SEED_USER_ID, plaidId: null },
+  // { id: "category_8", name: "健康", userId: SEED_USER_ID, plaidId: null },
+  // { id: "category_10", name: "娱乐", userId: SEED_USER_ID, plaidId: null },
 ];
 
 const SEED_ACCOUNTS = [
-  { id: "account_1", name: "Checking", userId: SEED_USER_ID, plaidId: null },
-  { id: "account_2", name: "Savings", userId: SEED_USER_ID, plaidId: null },
+  { id: "account_1",name: "信用卡", userId: SEED_USER_ID, plaidId: null },
+  { id: "account_2", name: "储蓄", userId: SEED_USER_ID, plaidId: null },
 ];
 
 const defaultTo = new Date();
@@ -32,17 +35,17 @@ import { convertAmountToMiliunits } from "@/lib/utils";
 
 const generateRandomAmount = (category: typeof categories.$inferInsert) => {
   switch (category.name) {
-    case "Rent":
+    case "租金":
       return Math.random() * 400 + 90; // Rent will likely be a larger amount
-    case "Utilities":
+    case "公用":
       return Math.random() * 200 + 50;
-    case "Food":
+    case "食物":
       return Math.random() * 30 + 10;
-    case "Transportation":
-    case "Health":
+    case "运输":
+    case "健康":
       return Math.random() * 50 + 15;
-    case "Entertainment":
-    case "Clothing":
+    case "娱乐":
+    case "服装":
     case "Miscellaneous":
       return Math.random() * 100 + 20;
     default:

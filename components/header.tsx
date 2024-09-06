@@ -24,8 +24,11 @@ const Header = () => {
                         <Loader2 className="animate-spin size-8 text-slate-400"/>
                     </ClerkLoading>
                 </div> 
+
                 <WelcomeMsg/>
+
                 <Filters />
+                
             </div>
         </header>
     );
